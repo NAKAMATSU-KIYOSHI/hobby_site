@@ -55,3 +55,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+
+gem 'rails_admin', '~> 2.0', git: 'https://github.com/sferik/rails_admin.git'
