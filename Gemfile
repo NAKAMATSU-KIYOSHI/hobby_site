@@ -57,3 +57,6 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 
 gem 'rails_admin', '~> 2.0', git: 'https://github.com/sferik/rails_admin.git'
+
+# devise
+gem 'devise', '~> 4.2'
