@@ -25,5 +25,6 @@ module HobbySite
      Devise::PasswordsController.layout "devise"
      HomeController.layout "home"
    end
+   config.read_encrypted_secrets = true
   end
 end
