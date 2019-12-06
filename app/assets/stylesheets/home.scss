@@ -1,3 +1,142 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+/* -------------------- title -------------------- */
+#title {
+  float: center;
+  display: block;
+  height: 80px;
+  margin: 0;
+  padding: 10px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #aebac6;
+  text-align: center;
+}
+/* -------------------- nav -------------------- */
+#nav {
+  width: 100%;
+}
+#nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#nav ul li {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+#nav ul li a {
+  display: block;
+  height: 40px;
+  margin: 0;
+  padding: 10px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #aebac6;
+}
+/* -------------------- container -------------------- */
+#container {
+  width: 100%;
+  margin: auto ;
+  padding: auto;
+  padding-top: 20px;
+  clear: both;
+}
+/* -------------------- main -------------------- */
+#main {
+  float: right;
+  width: 60%;
+  padding: 10px 30px 10px 10px;
+}
+#main h2 {
+  margin: 0 0 10px 0;
+  padding: 3px 10px 3px 10px;
+  color: #fff;
+  font-size: 16px;
+  border-left: solid 10px #aebac6;
+  background: #aebac6 url(../images/main_h2.jpg) right top repeat-y;
+}
+#main p {
+  margin: 0;
+  padding: 0;
+}
+#main .post {
+  margin: 0 0 30px 0;
+}
+#main .post h2 {
+  margin: 0 0 10px 0;
+  padding: 3px 10px 3px 10px;
+  color: #fff;
+  font-size: 16px;
+  border-left: solid 10px #fff;
+  background: #aebac6 url(../images/main_h2.jpg) right top repeat-y;
+}
+#main .post img.right {
+  margin: 0 0 0 8px;
+}
+#main .post img.left {
+  margin: 0 8px 0 0;
+}
+
+.right {
+  float: right;
+  width: 40%;
+  height: auto;
+}
+.left {
+  float: left;
+  width: 40%;
+  height: auto;
+}
+
+/* -------------------- clearfix -------------------- */
+.clearfix { zoom: 1; }
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* -------------------- side -------------------- */
+#side {
+  float: left;
+  width: 30%;
+  padding: 20px;
+  background-color: #aebac6;
+}
+#side .box {
+  margin: 0 auto 30px auto;
+  padding: 0 0 20px 0;
+  background: url(images/side_box.png) bottom no-repeat;
+}
+#side .box h2 {
+  margin: 0;
+  padding: 8px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: normal;
+  background: url(images/side_box_h2.png) center no-repeat;
+}
+#side .box .boxBody {
+  padding: 8px;
+  border-right: solid 1px grey;
+  border-bottom: solid 1px grey;
+  border-left: solid 1px grey;
+  background: #fff;
+}
+#side .box .boxBody ul {
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+#side .box .boxBody ul li {
+  padding: 8px 0 8px 4px;
+  list-style: none;
+  border-bottom: solid 1px grey;
+}
