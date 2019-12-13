@@ -9,13 +9,28 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <div class="category">
+        <%= yield :category %>
+      </div>
     <%= render "layouts/header" %>
     <%= render "layouts/flash" %>
     <main class="bg-home d-flex align-items-center w-100 h-100">
+
       <div class="container">
+        <div id="title">
+          <h1>Hobby site(仮)</h1>
+        </div>
+        <h2 class="text-center" style="color: #000"><%= yield :page_title %></h2>
+
         <%= yield %>
+        <div class="side">
+        <%= yield :side %>
       </div>
+      </div>
+
     </main>
+
     <%= render "layouts/footer" %>
   </body>
+
 </html>

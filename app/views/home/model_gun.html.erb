@@ -1,17 +1,7 @@
-<div id="title">
-  <h1>Hobby site(仮)</h1>
-</div>
-<h2 class="text-center" style="color: #000">モデルガン</h2>
-<body>
-<div id="nav">
-  <ul>
-    <li><a href="plamo.html">プラモデル</a></li>
-    <li><a href="toy.html">トイ</a></li>
-    <li><a href="car_model.html">カーモデル</a></li>
-    <li><a href="model_gun.html">モデルガン</a></li>
-    <li><a href="other.html">その他</a></li>
-  </ul>
-</div>
+<% content_for :page_title do %>
+モデルガン
+<% end %>
+<%= render "category" %>
 <div id="container">
     <div id="main">
         <div class="post">
@@ -35,29 +25,5 @@
             </p>
         </div>
     </div>
-    <div id="side">
-    <div class="box">
-        <h2>サイドメニュー1</h2>
-        <div class="boxBody">
-            <ul>
-                <li>項目1</li>
-                <li>項目2</li>
-                <li>項目3</li>
-                <li>項目4</li>
-            </ul>
-        </div>
-    </div>
-    <div class="box">
-            <h2>サイドメニュー2</h2>
-            <div class="boxBody">
-                <ul>
-                    <li>項目1</li>
-                    <li>項目2</li>
-                    <li>項目3</li>
-                    <li>項目4</li>
-                </ul>
-            </div>
-    </div>
+    <%= render "sidebar" %>
 </div>
-</div>
-</body>
