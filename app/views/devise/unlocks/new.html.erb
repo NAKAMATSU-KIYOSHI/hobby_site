@@ -5,10 +5,10 @@
 
   <div class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, class: "form-control col-md-5 col-sm", placeholder: "Enter email" %>
   </div>
 
-  <div class="actions">
+  <div class="actions pb-5">
     <%= f.submit "Resend unlock instructions" %>
   </div>
 <% end %>
