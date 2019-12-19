@@ -26,5 +26,6 @@ module HobbySite
      HomeController.layout "home"
    end
    config.read_encrypted_secrets = true
+   config.active_job.queue_adapter = :sidekiq
   end
 end

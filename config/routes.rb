@@ -2,18 +2,20 @@ Rails.application.routes.draw do
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :posts
+  resources :home
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root to: "home#index"
 
-  get "plamo" => "home#plamo"
 
-  get "toy" => "home#toy"
+  # get "plamo" => "home#plamo"
 
-  get "car_model" => "home#car_model"
+  # get "toy" => "home#toy"
 
-  get "model_gun" => "home#model_gun"
+  # get "car_model" => "home#car_model"
 
-  get "other" => "home#other"
+  # get "model_gun" => "home#model_gun"
+
+  # get "other" => "home#other"
 
 end
