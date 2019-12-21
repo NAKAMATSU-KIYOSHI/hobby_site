@@ -21,7 +21,7 @@ def self.find_for_database_authentication(warden_conditions)
   login = conditions.delete(:login)
 
   where(conditions.to_hash).where(
-    ["lower(name) = :value OR lower(email) = :value",{ value: login:downcase }]
+    ["lower(name) = :value OR lower(email) = :value",{ value: login.downcase }]
     ).first
 end
 
