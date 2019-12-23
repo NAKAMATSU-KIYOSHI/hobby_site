@@ -12,6 +12,9 @@ devise_for :users
 
   root to: "home#index"
 
+  post "posts/creat" => "posts#new"
+
+  get "posts/:id" => "posts#show"
 
   get "plamo" => "home#plamo"
 
