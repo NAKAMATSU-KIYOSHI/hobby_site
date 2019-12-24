@@ -3,6 +3,7 @@ class Post < ApplicationRecord
     ["title", "content"]
   end
 
+
   def self.generate_csv
     CSV.generate(headers: true) do |csv|
       csv << csv_attributes

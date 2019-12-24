@@ -15,6 +15,8 @@ class User < ApplicationRecord
     @login = login
   end
 
+
+
 def self.find_for_database_authentication(warden_conditions)
   conditions = warden_conditions.dup
   conditions[:email].downcase! if conditions[:email]
