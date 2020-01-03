@@ -20,7 +20,7 @@ devise_for :users
 
   get "toy" => "home#toy"
 
-  get "car_model" => "home#car_model"
+  get "train_model" => "home#train_model"
 
   get "model_gun" => "home#model_gun"
 

@@ -11,7 +11,7 @@ class HomeController < ApplicationController
     @user = current_user
   end
 
-  def car_model
+  def train_model
     @user = current_user
   end
 
