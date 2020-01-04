@@ -5,6 +5,7 @@ class HomeController < ApplicationController
 
   def plamo
     @user = current_user
+    @Items = Item.where(category_name: "plamo")
   end
 
   def toy

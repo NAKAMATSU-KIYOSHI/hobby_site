@@ -8,6 +8,5 @@ class CreateItems < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
-    add_reference :plamo, :toy, :train_model, :model_gun, :other
   end
 end
