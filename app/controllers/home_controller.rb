@@ -6,9 +6,21 @@ class HomeController < ApplicationController
   def plamo
     @user = current_user
     @items = Item.where(category_name: "plamo")
+
+  end
+
+  def plamo_details
+    @user = current_user
+    @items = Item.where(category_name: "plamo")
+
   end
 
   def toy
+    @user = current_user
+    @items = Item.where(category_name: "toy")
+  end
+
+  def toy_details
     @user = current_user
     @items = Item.where(category_name: "toy")
   end
@@ -18,7 +30,17 @@ class HomeController < ApplicationController
     @items = Item.where(category_name: "train_model")
   end
 
+  def train_model_details
+    @user = current_user
+    @items = Item.where(category_name: "train_model")
+  end
+
   def model_gun
+    @user = current_user
+    @items = Item.where(category_name: "model_gun")
+  end
+
+  def model_gun_details
     @user = current_user
     @items = Item.where(category_name: "model_gun")
   end
@@ -27,5 +49,11 @@ class HomeController < ApplicationController
     @user = current_user
     @items = Item.where(category_name: "other")
   end
+
+  def other_details
+    @user = current_user
+    @items = Item.where(category_name: "other")
+  end
+
 
 end

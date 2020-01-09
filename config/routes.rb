@@ -18,12 +18,22 @@ devise_for :users
 
   get "plamo" => "home#plamo"
 
+  get "plamo_details" => "home#plamo_details"
+
   get "toy" => "home#toy"
+
+  get "toy_details" => "home#toy_details"
 
   get "train_model" => "home#train_model"
 
+  get "train_model_details" => "home#train_model_details"
+
   get "model_gun" => "home#model_gun"
 
+  get "model_gun_details" => "home#model_gun_details"
+
   get "other" => "home#other"
+
+  get "other_details" => "home#other_details"
 
 end
