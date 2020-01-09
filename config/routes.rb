@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 end
 
 
+
 devise_for :users
 
   root to: "home#index"
@@ -18,22 +19,22 @@ devise_for :users
 
   get "plamo" => "home#plamo"
 
-  get "plamo_details" => "home#plamo_details"
+  get "plamo_details/:id" => "home#plamo_details", as: 'plamo_details'
 
   get "toy" => "home#toy"
 
-  get "toy_details" => "home#toy_details"
+  get "toy_details/:id" => "home#toy_details", as: 'toy_details'
 
   get "train_model" => "home#train_model"
 
-  get "train_model_details" => "home#train_model_details"
+  get "train_model_details/:id" => "home#train_model_details", as: 'train_model_details'
 
   get "model_gun" => "home#model_gun"
 
-  get "model_gun_details" => "home#model_gun_details"
+  get "model_gun_details/:id" => "home#model_gun_details", as: 'model_gun_details'
 
   get "other" => "home#other"
 
-  get "other_details" => "home#other_details"
+  get "other_details/:id" => "home#other_details", as: 'other_details'
 
 end

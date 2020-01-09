@@ -11,8 +11,8 @@
              <h2>製品一覧</h2>
             <p>
                 <% @items.each do |item| %>
-        <%= item.product_name %><br>
-    <% end %>
+                    <%= link_to item.product_name, other_details_path(item) %><br>
+                <% end %>
             </p>
         </div>
 
