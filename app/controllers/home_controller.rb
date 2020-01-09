@@ -12,6 +12,7 @@ class HomeController < ApplicationController
   def plamo_details
     @user = current_user
     @items = Item.where(id: params[:id], category_name: "plamo")
+    @posts = Post.where(id: params[:id], category_name: "plamo")
 
   end
 
