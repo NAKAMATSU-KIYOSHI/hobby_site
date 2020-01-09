@@ -5,23 +5,30 @@
 <div id="container">
     <div id="main">
         <div class="post">
-            <p>ここは文章が入ります。ここは文章が入ります。ここは文章が入ります。<br />今は、適当な文章を入れてあります。これをダミーテキストといいます。</p>
+            <p>その他になります</p>
         </div>
         <div class="post clearfix">
-            <h2>小見出し1</h2>
-            <img class="left" src="#" alt="画像1" />
+             <h2>製品一覧</h2>
             <p>
-                コンテンツ1の本文になります。コンテンツ1の本文になります。コンテンツ1の本文になります。コンテンツ1の本文になります。
-                コンテンツ1の本文になります。コンテンツ1の本文になります。コンテンツ1の本文になります。コンテンツ1の本文になります。
+                <% @items.each do |item| %>
+        <%= item.product_name %><br>
+    <% end %>
             </p>
-            <p><a href="#">→コンテンツ1のページへ</a></p>
         </div>
         <div class="post clearfix">
-            <h2>小見出し2</h2>
-            <img class="left" src="#" alt="画像2" />
+             <h2>製品詳細</h2>
+            <p><% @items.each do |item| %>
+        <%= item.product_name %><br>
+        <%= item.content %><br>
+        <%= item.release_date %><br>
+        <%= item.price %>円<br>
+    <% end %>
+            </p>
+        </div>
+        <div class="post clearfix">
+            <h2>コメント</h2>
             <p>
-                コンテンツ2の本文になります。コンテンツ2の本文になります。コンテンツ2の本文になります。コンテンツ2の本文になります。
-                コンテンツ2の本文になります。コンテンツ2の本文になります。コンテンツ2の本文になります。コンテンツ2の本文になります。
+                <a href="posts/new">投稿</a>
             </p>
         </div>
     </div>
