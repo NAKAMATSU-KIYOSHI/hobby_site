@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :contacts
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :posts do
   # resources :home
