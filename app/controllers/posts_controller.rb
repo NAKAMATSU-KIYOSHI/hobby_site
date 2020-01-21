@@ -29,9 +29,33 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    item=Item.find(post_params[:item_id])
+    if item.category_name=='plamo'
+      url="/plamo_details/#{item.id}"
+    end
+    @post = Post.new(post_params)
+    item=Item.find(post_params[:item_id])
+    if item.category_name=='model_gun'
+      url="/model_gun_details/#{item.id}"
+    end
+    @post = Post.new(post_params)
+    item=Item.find(post_params[:item_id])
+    if item.category_name=='toy'
+      url="/toy_details/#{item.id}"
+    end
+    @post = Post.new(post_params)
+    item=Item.find(post_params[:item_id])
+    if item.category_name=='other'
+      url="/other_details/#{item.id}"
+    end
+    @post = Post.new(post_params)
+    item=Item.find(post_params[:item_id])
+    if item.category_name=='train_model'
+      url="/train_model_details/#{item.id}"
+    end
     respond_to do |format|
       if @post.save!
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to url }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
