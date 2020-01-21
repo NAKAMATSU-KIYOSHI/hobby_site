@@ -62,16 +62,5 @@ Rails.application.configure do
 
   # devise の設定
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
-  config.action_mail
-
-config.action_mailer.delivery_method = :smtp
-config.action_mailer.smtp_settings = {
-  address: 'smtp.gmail.com',
-  port: 587,
-  authentication: :plain,
-  user_name: Rails.application.secrets.SMTP_EMAIL,
-  password: Rails.application.secrets.SMTP_PASSWORD
-}
-
 
 end
