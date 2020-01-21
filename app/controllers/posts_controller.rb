@@ -9,6 +9,10 @@ class PostsController < ApplicationController
 
   def show
      @post = Post.find_by(id:params[:id])
+      if @post.present?
+
+      else
+         puts "no post"
   end
 
   # GET /posts/new
