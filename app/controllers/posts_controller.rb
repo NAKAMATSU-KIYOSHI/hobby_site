@@ -13,6 +13,7 @@ class PostsController < ApplicationController
 
       else
          puts "no post"
+       end
   end
 
   # GET /posts/new
@@ -28,9 +29,8 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
-
     respond_to do |format|
-      if @post.save
+      if @post.save!
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
@@ -72,6 +72,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :item_id)
     end
 end

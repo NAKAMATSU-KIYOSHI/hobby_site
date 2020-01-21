@@ -11,8 +11,8 @@ class HomeController < ApplicationController
 
   def plamo_details
     @user = current_user
-    @items = Item.where(id: params[:id], category_name: "plamo")
-    @posts = Post.where(id: Item)
+    @item = Item.find_by(id: params[:id], category_name: "plamo")
+    @posts = Post.where(item: @item)
 
   end
 
@@ -23,8 +23,8 @@ class HomeController < ApplicationController
 
   def toy_details
     @user = current_user
-    @items = Item.where(id: params[:id],category_name: "toy")
-    @posts = Post.where(id: Item)
+    @item = Item.find_by(id: params[:id],category_name: "toy")
+    @posts = Post.where(item: @item)
   end
 
   def train_model
@@ -34,8 +34,8 @@ class HomeController < ApplicationController
 
   def train_model_details
     @user = current_user
-    @items = Item.where(id: params[:id],category_name: "train_model")
-    @posts = Post.where(id: Item)
+    @item = Item.find_by(id: params[:id],category_name: "train_model")
+    @posts = Post.where(item: @item)
   end
 
   def model_gun
@@ -45,8 +45,8 @@ class HomeController < ApplicationController
 
   def model_gun_details
     @user = current_user
-    @items = Item.where(id: params[:id],category_name: "model_gun")
-    @posts = Post.where(id: Item)
+    @item = Item.find_by(id: params[:id],category_name: "model_gun")
+    @posts = Post.where(item: @item)
   end
 
   def other
@@ -56,8 +56,8 @@ class HomeController < ApplicationController
 
   def other_details
     @user = current_user
-    @items = Item.where(id: params[:id],category_name: "other")
-    @posts = Post.where(id: Item)
+    @item = Item.find_by(id: params[:id],category_name: "other")
+    @posts = Post.where(item: @item)
   end
 
 

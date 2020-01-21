@@ -6,13 +6,12 @@
     <div id="main">
 
         <div class="post clearfix">
-             <h2>製品詳細</h2>
-            <p><% @items.each do |item| %>
-        <%= item.product_name %><br>
-        <%= item.content %><br>
-        <%= item.release_date %><br>
-        <%= item.price %>円<br>
-    <% end %>
+            <h2>製品詳細</h2>
+            <p>
+        <%= @item.product_name %><br>
+        <%= @item.content %><br>
+        <%= @item.release_date %><br>
+        <%= @item.price %>円<br>
             </p>
         </div>
         <div class="post clearfix">
@@ -22,7 +21,7 @@
                     <%= post.title %><br>
                     <%= post.content %><br>
                 <% end %>
-                <%= render 'posts/form', post: @post %>
+                <%= render 'posts/form', post: @post, item_id: @item.id %>
             </p>
         </div>
     </div>
