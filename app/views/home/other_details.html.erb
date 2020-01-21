@@ -18,7 +18,11 @@
         <div class="post clearfix">
             <h2>コメント</h2>
             <p>
-                <a href="posts/new">投稿</a>
+                <% @posts.each do |post| %>
+                    <%= post.title %><br>
+                    <%= post.content %><br>
+                <% end %>
+                <%= render 'posts/form', post: @post %>
             </p>
         </div>
     </div>
