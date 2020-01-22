@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  # validates :title, :content, presence: true
   def self.csv_attributes
     ["title", "content"]
   end

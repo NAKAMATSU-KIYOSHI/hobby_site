@@ -20,6 +20,8 @@ class ContactsController < ApplicationController
     if @contact.save
       ContactMailer.contact_mail(@contact).deliver
       redirect_to contacts_path,notice: 'Contact was successfully created.'
+    else
+      render :new
     end
   end
 
