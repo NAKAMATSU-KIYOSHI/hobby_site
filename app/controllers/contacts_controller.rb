@@ -1,11 +1,9 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
 
-
   def index
     @contacts = Contact.all
   end
-
 
   def show
   end
@@ -17,12 +15,11 @@ class ContactsController < ApplicationController
   def edit
   end
 
-
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
       ContactMailer.contact_mail(@contact).deliver
-      redirect_to contacts_path,notice: 'Contact was successfully created.'
+      redirect_to '/',notice: 'Contact was successfully created.'
     end
   end
 
@@ -37,7 +34,6 @@ class ContactsController < ApplicationController
       end
     end
   end
-
 
   def destroy
     @contact.destroy
