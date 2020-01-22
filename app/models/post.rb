@@ -2,7 +2,8 @@ class Post < ApplicationRecord
   def self.csv_attributes
     ["title", "content"]
   end
-belongs_to :item
+has_many :item
+belongs_to :user
 
   def self.generate_csv
     CSV.generate(headers: true) do |csv|
