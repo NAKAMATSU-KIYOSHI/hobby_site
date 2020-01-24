@@ -60,5 +60,9 @@ class HomeController < ApplicationController
     @posts = Post.where(item: @item)
   end
 
+  def comments_history
+    @user = current_user
+    @posts =
+  end
 
 end
