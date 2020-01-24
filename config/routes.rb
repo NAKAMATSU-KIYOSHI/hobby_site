@@ -12,9 +12,7 @@ Rails.application.routes.draw do
 
    root to: "home#index"
 
-
-
-
+   get "comments_history" => "home#comments_history"
 
    get "plamo" => "home#plamo"
 

@@ -1,0 +1,21 @@
+<% content_for :page_title do %>
+コメント履歴
+<% end %>
+<%= render "category" %>
+<div id="container">
+    <div id="main">
+        <div class="post">
+            <p>商品ページでのコメントの投稿履歴になります。</p>
+        </div>
+        <div class="post clearfix">
+            <h2>投稿コメント一覧</h2>
+            <p>
+                <% @items.each do |item| %>
+                    <%= link_to item.product_name, plamo_details_path(item) %><br>
+                <% end %>
+            </p>
+        </div>
+
+    </div>
+    <%= render "sidebar" %>
+</div>
