@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
    get "comments_history" => "home#comments_history"
 
+   get "contact" => "home#contact"
+
    get "plamo" => "home#plamo"
 
    get "plamo_details/:id" => "home#plamo_details", as: 'plamo_details'
