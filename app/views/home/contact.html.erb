@@ -1,0 +1,18 @@
+<% content_for :page_title do %>
+お問い合わせ
+<% end %>
+<%= render "category" %>
+<div id="container">
+    <div id="main">
+        <div class="post">
+            <p>お問い合わせページになります。</p>
+        </div>
+        <div class="post clearfix">
+            <p>
+                <%= render "contacts/_form" %>
+            </p>
+        </div>
+
+    </div>
+    <%= render "sidebar" %>
+</div>
